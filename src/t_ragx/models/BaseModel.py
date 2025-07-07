@@ -216,6 +216,7 @@ class BaseModel(metaclass=abc.ABCMeta):
                 "Numbers & Units: Express numbers in Korean conventional format (e.g., “3만 개”, “5,000억 달러”). "
                 "Key Names: Preserve original English brand or trademark names exactly (e.g., MarketsandMarkets™). "
                 "If I provide a text with a lot of numbers, units, and key names, you should translate them in the same way as the original text. Keep all foramtting as is. "
+                "You need to translate all of the text. Eg: '-Test-,' should be translated to '-테스트-,', keep the original formatting. "
                 "These are some references that might help you translating passages:\n"
                 f"{glossary_to_text(search_result['glossary'])}{pretext_to_text(pre_text)}{trans_mem_to_text(search_result['memory'], source_lang_code=source_lang_code, target_lang_code=target_lang_code)}"
                 f"Translate this {source_lang} passage to {target_lang} "
