@@ -213,6 +213,7 @@ class BaseModel(metaclass=abc.ABCMeta):
                 "• Structure: Mirror original sentence length and rhythm while maintaining natural Korean flow\n"
                 "• Numbers: Use Korean conventional format (e.g., '3만 개', '5,000억 달러')\n"
                 "• Brand names: Keep original English names exactly (e.g., MarketsandMarkets™)\n"
+                "• Acronyms: Keep all acronyms and abbreviations in original English (e.g., 'FDI', 'GDP', 'CEO', 'AI', 'IoT')\n"
                 "• Formatting: Preserve ALL original formatting, punctuation, spaces, and special characters exactly\n"
                 "  Example: '-abc ,... !' should become '-{translated text} ,... !' keeping every dash, space, comma, and symbol\n\n"
                 "These are some references that might help you translating passages:\n"
