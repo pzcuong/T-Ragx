@@ -207,20 +207,17 @@ class BaseModel(metaclass=abc.ABCMeta):
 
         chat = [
             {"role": "user", "content": (
-                "You are a professional translator specializing in B2B market research reports. "
-                "Maintain a consistent, polished, and formal tone throughout. "
-                "Always use the ‘–습니다’-style in Korean translations, and apply the same rules to numbers, units, and key names. "
-                "Translate the following English text into Korean. Your translation must: "
-                "Tone & Style: Use a formal “–습니다” style, suitable for C-level readers. "
-                "Sentence Length: Mirror the original’s rhythm—keep Korean sentences roughly as long as the English, but ensure natural flow. "
-                "Numbers & Units: Express numbers in Korean conventional format (e.g., “3만 개”, “5,000억 달러”). "
-                "Key Names: Preserve original English brand or trademark names exactly (e.g., MarketsandMarkets™). "
-                "If I provide a text with a lot of numbers, units, and key names, you should translate them in the same way as the original text. Keep all foramtting as is. "
-                "You need to translate all of the text. Eg: '-Test-,' should be translated to '-테스트-,', keep the original formatting. "
+                "You are a professional translator specializing in B2B market research reports for C-level executives.\n\n"
+                "Translation Requirements:\n"
+                "• Style: Formal –습니다 tone throughout\n"
+                "• Structure: Mirror original sentence length and rhythm while maintaining natural Korean flow\n"
+                "• Numbers: Use Korean conventional format (e.g., '3만 개', '5,000억 달러')\n"
+                "• Brand names: Keep original English names exactly (e.g., MarketsandMarkets™)\n"
+                "• Formatting: Preserve ALL original formatting, punctuation, spaces, and special characters exactly\n"
+                "  Example: '-abc ,... !' should become '-{translated text} ,... !' keeping every dash, space, comma, and symbol\n\n"
                 "These are some references that might help you translating passages:\n"
                 f"{glossary_to_text(search_result['glossary'])}{pretext_to_text(pre_text)}{trans_mem_to_text(search_result['memory'], source_lang_code=source_lang_code, target_lang_code=target_lang_code)}"
-                f"Translate this {source_lang} passage to {target_lang} "
-                "without additional questions, disclaimer, or explanations, but accurately and completely:"
+                f"Translate this {source_lang} text to {target_lang} accurately and completely:\n\n"
                 f"{text}"
             )},
         ]
