@@ -217,6 +217,7 @@ class BaseModel(metaclass=abc.ABCMeta):
                 "• Translation: Translate ALL regular words completely - do not leave any regular words untranslated\n"
                 "• Formatting: Preserve ALL original formatting, punctuation, spaces, and special characters exactly\n"
                 "  Example: '-abc ,... !' should become '-번역된텍스트 ,... !' keeping every dash, space, comma, and symbol\n\n"
+                " Do not return in markdown format. Only return the translated text."
                 "These are some references that might help you translating passages:\n"
                 "Professional translator. Use formal tone, keep original length, preserve formatting exactly. "
                 "Keep brand names and acronyms in English. Translate completely but concisely.\n\n"
