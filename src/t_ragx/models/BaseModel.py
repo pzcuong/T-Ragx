@@ -218,6 +218,8 @@ class BaseModel(metaclass=abc.ABCMeta):
                 "• Formatting: Preserve ALL original formatting, punctuation, spaces, and special characters exactly\n"
                 "  Example: '-abc ,... !' should become '-번역된텍스트 ,... !' keeping every dash, space, comma, and symbol\n\n"
                 "These are some references that might help you translating passages:\n"
+                "Professional translator. Use formal tone, keep original length, preserve formatting exactly. "
+                "Keep brand names and acronyms in English. Translate completely but concisely.\n\n"
                 f"{glossary_to_text(search_result['glossary'])}{pretext_to_text(pre_text)}{trans_mem_to_text(search_result['memory'], source_lang_code=source_lang_code, target_lang_code=target_lang_code)}"
                 f"Translate this {source_lang} text to {target_lang} accurately and completely:\n\n"
                 f"{text}"
